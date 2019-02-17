@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+
+#define MAX_SIZE 100
+
+void main()
+{
+    int n,a[MAX_SIZE],i,j;
+    int val,loc,b,loc1;
+    printf("Enter no of elements in an array:");
+    scanf("%d",&n);  
+    printf(" Enter the elements of the array ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("The alternate elements of the array are:");
+    for(i=0;i<=n/2;i++)
+    {
+        printf("%d  ",a[2*i]);                                         // Logic to print alternate elements
+    }
+
+getch();
+}
