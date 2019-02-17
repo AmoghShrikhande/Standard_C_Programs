@@ -1,0 +1,25 @@
+
+#include <stdio.h>
+#include <malloc.h>
+
+int main()
+{
+    
+    int n,i=0;
+    int count = 0 ;
+ 
+    char* str = (char*)malloc(50*sizeof(char));                             // Dynamically allocate memory to the string
+    printf("Please enter the string whose length is to be checked\n\r");
+    scanf("%s", str);
+    printf("The entered string is %s\n\r",str);
+    
+    
+    while(*(str+i) != '\0')             // Logic to calculate the length of the string
+    {
+        count++;
+        i++;
+    }
+    
+    printf("The length of the string is %d\n\r", count);
+    return 0;
+}
