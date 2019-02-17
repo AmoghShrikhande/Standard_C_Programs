@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+#include <malloc.h>
+
+int main()
+{
+    
+    int n,i;
+    int count = 0;
+    int flag = 0;
+    char key;
+    printf("Please enter the no of characters contained by the string\n\r");
+    scanf("%d",&n);
+    char* str = malloc(n*sizeof(char));                                          // based on no of characters allocate the memory for the string
+    printf("Please enter the string:\n\r");
+    scanf("%s", str);
+    printf("The entered string is %s\n\r",str);
+    
+    for(i=0;i<n;i++)
+    {
+        if ((*(str+i) == 'a') || (*(str+i) == 'e') || (*(str+i) == 'i')|| (*(str+i) == 'o')|| (*(str+i) == 'u') || (*(str+i) == 'A') || (*(str+i) == 'E'|| (*(str+i) == 'I')|| (*(str+i) == 'O') || (*(str+i) == 'U')))
+      {
+       count++;        // Increase the count if vowel encountered
+       flag=1;
+      }
+    }
+    if (flag==1)
+    {
+        printf("The given string contains vowels and total no of vowels contained is %d\n\r",count);
+    }
+    else if (flag==0)
+    {
+        printf("The given string contains only consonants\n\r");
+    }
+     return 0;
+}
