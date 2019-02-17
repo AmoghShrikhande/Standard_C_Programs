@@ -1,0 +1,50 @@
+/* Header Files */
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+
+/*Function prototyping*/
+int addition(int,int);
+void subtraction(int,int);
+
+
+/*Main starts here*/
+int main()
+{
+ int a,b,sum;
+ sum=addition(a,b);
+ printf(" the sum  is %d",sum);
+ return 0;
+ getch();
+}
+
+/*******************************************************************************
+* Function Name: addition
+********************************************************************************
+*
+* Summary:
+*  This function enables the user to add two numbers
+*
+* Parameters:
+*  Integer type
+*
+* Return:
+*  Integer
+*
+* Reentrant:
+*  No.
+*
+* Reference:
+*  Self
+*******************************************************************************/
+int addition (int a, int b)
+{
+  int temp;
+  
+  printf("Enter the no to be added");
+  scanf("%d%d",&a,&b);
+  
+  temp= a+b;               // logic for addition
+  return temp;
+}
