@@ -1,0 +1,67 @@
+
+
+
+/*program to display prime nos btwn 2 nos using a fn*/
+
+/*Header Files*/
+#include<conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Function prototyping*/
+void prime( int , int);
+
+/*Main starts here*/
+int main()
+{
+    int a,b;
+    printf("Enter the numbers between which you want to print all the prime nos\n\r");
+    scanf("%d %d",&a,&b);
+    printf("the prime nos between given range are :\n\r");
+    prime(a,b); 
+
+    return 0;
+}
+
+
+*******************************************************************************
+* Function Name: prime
+********************************************************************************
+*
+* Summary:
+*  This function enables the user to identify the prime numbers in a given range
+*
+* Parameters:
+*  2,Integer type
+*
+* Return:
+*  None
+*
+* Reentrant:
+*  No.
+*
+* Reference:
+*  Self
+*******************************************************************************/
+void prime (int a, int b)     
+{
+    int n,i,c;                              // Variable c is used as a flag
+    for(n=a+1;n<b;n++)                      // Logic to find prime number starts here
+    {
+        for(i=2;i<n^(1/2);i++)
+        {
+            if( n%i==0)
+            {
+                c=1;
+                break;
+            }
+            else c=0;
+        }
+
+      if (c==0)
+       {
+          printf("%d\n",n);
+          c=1;
+       }
+    }
+}
